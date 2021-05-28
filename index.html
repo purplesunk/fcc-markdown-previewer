@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+
+        <title>A Markdown Previewer</title>
+
+        <link rel="stylesheet" href="./css/styles.css">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto+Mono&display=swap" rel="stylesheet"> 
+
+        <script src="https://kit.fontawesome.com/6106fc5b38.js" crossorigin="anonymous"></script>
+
+
+        <script src="./js/marked.js"></script>
+        <script src="./js/main.js"></script>
+
+    </head>
+    <body onload="setDefault()">
+
+        <div id="editor-div" class="container">
+            <div class="title-bar">
+                <h2 class="container-title"><i class="fa fa-i-cursor fa-sm"></i>Editor</h2>
+                <div class="icon-div" onclick="toggleEditor()"></div>
+            </div>
+            <textarea id="editor" oninput="modifyEditor()"></textarea>
+        </div>
+
+        <div id="preview-div" class="container">
+            <div class="title-bar">
+                <h2 class="container-title"><i class="fa fa-file-alt fa-sm"></i>Markdown Previewer</h2>
+                <div class="icon-div" onclick="togglePreview()"></div>
+            </div>
+        <div id="preview"></div>
+        </div>
+
+    </body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
