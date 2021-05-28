@@ -1,5 +1,17 @@
 let editorText = "";
 
+// Set options
+// `highlight` example uses https://highlightjs.org
+marked.setOptions({
+  pedantic: false,
+  gfm: true,
+  breaks: true,
+  sanitize: false,
+  smartLists: true,
+  smartypants: false,
+  xhtml: false
+});
+
 function modifyPreview() {
     let previewElement = document.getElementById("preview");
     previewElement.innerHTML = marked(editorText);
